@@ -17,5 +17,11 @@ To take the photos we use a digital microscope Bysameyee 8-SA-00  to get photos 
 </p>
 The images that were taken were divided into three different folders, one for wild flies, others for white flies and another for photos with both types of flies.
 
+Note: The images obtained with the canon camera, which are considerably larger than those of the digital microscope, gave problems during the training, so it was decided to divide the photograph into 20 pieces with the python image slicer library. This number of fragments was to obtain images of a size similar to that obtained with the digital microscope
+
+#### 1.2) Preparation of the folders
+
+using a python script (), the images from each folder (wild, white and both flies) were divided into three other folders (Training, validation and test) using the same proportions: 80% for training, 10% for validation and 10 % For tests. This was done mainly to avoid biases such as there being no hard-to-identify photos in the validation or a balanced representation of the types of flies in each group of images. 
+
 ---
 
