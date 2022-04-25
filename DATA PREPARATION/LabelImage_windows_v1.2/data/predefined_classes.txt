@@ -1,0 +1,6 @@
+wild type
+white type
+male white type
+female white type 
+male wild type
+female wild type
