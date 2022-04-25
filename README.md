@@ -15,7 +15,6 @@ To take the photos we use a digital microscope Bysameyee 8-SA-00  to get photos 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/photo_taking.jpg" | width=600 >
 </p>
-
 The images that were taken were divided into three different folders, one for wild flies, others for white flies and another for photos with both types of flies.
 ---
 
