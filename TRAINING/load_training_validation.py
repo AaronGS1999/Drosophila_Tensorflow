@@ -21,29 +21,13 @@ file path
 The .xml files must be together with the .jpg files
 """
 
-training_path = "C:/Users/aaron/Desktop/Tensorflow drosophila/fotos_drosophila/entrenamiento"
-validation_path ="C:/Users/aaron/Desktop/Tensorflow drosophila/fotos_drosophila/validacion"
-export_dir= "C:/Users/aaron/Desktop"
-tflite_filename="drosophila_lite2_epochs200_batc2_img104_new_dataset.tflite"
-model_dir = "C:/Users/aaron/Desktop/" + tflite_filename
+training_path = "" #Add the path of the training files
+validation_path ="" #Add the path of the validation files
+export_dir= "" # Add the path where the model will be exported
+tflite_filename="drosophila_lite2_epochs200_batc2_img104_new_dataset.tflite" # You can change this to whatever name you want
+model_dir = export_dir + tflite_filename
 
 # Selecting the model architecture
-
-"""
-| Model architecture | Size(MB)* | Latency(ms)** | Average Precision*** |
-|--------------------|-----------|---------------|----------------------|
-| EfficientDet-Lite0 | 4.4       | 146           | 25.69%               |
-| EfficientDet-Lite1 | 5.8       | 259           | 30.55%               |
-| EfficientDet-Lite2 | 7.2       | 396           | 33.97%               |
-| EfficientDet-Lite3 | 11.4      | 716           | 37.70%               |
-| EfficientDet-Lite4 | 19.9      | 1886          | 41.96%               |
-
-* Size of the integer quantized models.
-** Latency measured on Raspberry Pi 4 using 4 threads on CPU.
-*** Average Precision is the mAP (mean Average Precision) on the COCO 2017 validation dataset.
-"""
-
-
 spec = model_spec.get('efficientdet_lite2')
 
 # data upload 
@@ -59,10 +43,6 @@ validation_data = object_detector.DataLoader.from_pascal_voc(
 )
 
 # Training
-"""
-batch_size: Numero de datos que toma para entrenar la red cada vez
-epochs: Numero de veces que pasa por el conjunto de datos de entrenamiento
-"""
 model = object_detector.create(training_data, model_spec=spec, epochs=200, batch_size=2, train_whole_model=True, validation_data=validation_data)
 
 # Model evaluation
