@@ -15,6 +15,7 @@ To take the photos we use a digital microscope Bysameyee 8-SA-00  to get photos 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/photo_taking.jpg" | width=800 >
 </p>
+
 The images that were taken were divided into three different folders, one for wild flies, others for white flies and another for photos with both types of flies.
 
 Note: The images obtained with the canon camera, which are considerably larger than those of the digital microscope, gave problems during the training, so it was decided to divide the photograph into 20 pieces with the python image slicer library (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/4a60bbc513e815d96bb4fb950f312cb4625300fe/DATA%20PREPARATION/slicer.py). This number of fragments was to obtain images of a size similar to that obtained with the digital microscope
