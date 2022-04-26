@@ -61,4 +61,10 @@ Once this option is adjusted, you will be able to connect to the environment and
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/drive_setting.png">
 </p>
 
+Finally you must check that the content of the variable "training_path" and that of "validation_path" corresponds to the paths of your files. With the variable "tflite_filename" you can set the name of the .tflite file that will be generated after training:
+
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/path_setting.png">
+</p>
+
 ---
