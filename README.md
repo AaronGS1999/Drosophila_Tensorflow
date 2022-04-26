@@ -117,4 +117,6 @@ Python version and necessary packages versions:
  - keras 2.6.0
  - tensorflow-estimator 2.6.0
 
+Once the virtual environment has been adjusted, we can execute the script (ad script) to carry out the training. The code is practically the same as the one explained in the Google Colab version, except that in this case the paths are local directories on the computer (update script paths).
+
 ---
