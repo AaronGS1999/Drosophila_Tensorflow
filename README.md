@@ -61,10 +61,34 @@ Once this option is adjusted, you will be able to connect to the environment and
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/drive_setting.png">
 </p>
 
-Finally you must check that the content of the variable "training_path" and that of "validation_path" corresponds to the paths of your files. With the variable "tflite_filename" you can set the name of the .tflite file that will be generated after training:
+Then, you must check that the content of the variable "training_path" and that of "validation_path" corresponds to the paths of your files. With the variable "tflite_filename" you can set the name of the .tflite file that will be generated after training:
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/path_setting.png">
 </p>
+
+Now you will have to choose the model you want to train. You can do this in the following part of the code:
+
+      spec = model_spec.get('efficientdet_lite2')
+      
+In our case we have used the efficientdet_lite2 model because it meets the necessary precision requirements and in an acceptable time. You can change the model by changing the number "2" to 0, 1, 2, 3, and 4. The lower the number, the faster the model will make inferences, but will generally achieve lower accuracy values. You should assess which model is best for you to use based on your dataset. Also slower but more accurate models will have a bigger impact on the resources that Google colab allows you to use.
+
+After this, it only remains to adjust two variables, the number of epochs and the batch_size.
+
+     batch_size: Number of photos it takes at a time to train the network each time. If the number is 4, the photos will be passed 4 by 4 until all the photos of the dataset are passed
+     
+     epochs: Number of times the entire dataset passes through the AI during training
+     
+You can do this setting in the following line of code: 
+
+     model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
+     
+In our case, the best results are achieved with a number of epochs = 120 and a batch_size = 16. Note that a very high number of epochs can cause overfitting and make the model not generalize well and that a higher number of batch_sizes can improve model accuracy but will have a larger impact on google colab resources and may exceed the GPU memory limit.
+
+At this time you are ready to run the cells sequentially using the play icon to the left of each cell. As a result you will get a .tflite file where the trained model is saved
+
+Note: you cannot skip any cells. If this happens, the code will not work and you will have to restart the environment and execute each cell sequentially again.
+
+After training, the model is evaluated before and after it is exported to a .tflite model. You will see these results directly in the google colab notebook and you should pay attention that the values do not differ too much. If this happens, something strange has happened in the training or export process and you will need to adjust your training and validation files and repeat the process.
 
 ---
