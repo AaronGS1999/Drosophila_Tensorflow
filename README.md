@@ -95,11 +95,11 @@ Note: you cannot skip any cells. If this happens, the code will not work and you
 
 After training, the model is evaluated before and after it is exported to a .tflite model. You will see these results directly in the google colab notebook and you should pay attention that the values do not differ too much. If this happens, something strange has happened in the training or export process and you will need to adjust your training and validation files and repeat the process.
 
+Note: The mean average precision (mAP) was calculated using COCO (https://cocodataset.org/)
+
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=800 >
 </p>
-
-Note: The mean average precision (mAP) was calculated using COCO (https://cocodataset.org/)
 
 #### 1.2) Local training option (very dependent on the hardware you have)
 
@@ -117,6 +117,6 @@ Python version and necessary packages versions:
  - keras 2.6.0
  - tensorflow-estimator 2.6.0
 
-Once the virtual environment has been adjusted, we can execute the script (ad script) to carry out the training. The code is practically the same as the one explained in the Google Colab version, except that in this case the paths are local directories on the computer (update script paths).
+Once the virtual environment has been adjusted, we can execute the training script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/57746fd49055ac4c75a1ff1f284ce067cdd9da22/TRAINING/load_training_validation.py) to carry out the training. The code is practically the same as the one explained in the Google Colab version, except that in this case the paths are local directories on the computer (update script paths).
 
 ---
