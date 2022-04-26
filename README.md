@@ -49,8 +49,10 @@ To use this option, you only need a gmail account and upload files to drive with
 
 The next step is to open the link to the google colab with the code for the training: https://colab.research.google.com/drive/1SdoGigd8u9fq0PAgp6AqXftFHUAuaNqb?usp=sharing
 
-You need to change the runtime settings. Go in the top menu to runtime > change runtime type and enable GPU hardware acceleration. It should look like this:
+You need to change the runtime settings. Go in the top menu to runtime > change runtime type and enable GPU hardware acceleration. It should look like this (Don't forget to save the changes):
 
-
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/runtime_setting.png">
+</p>
 
 ---
