@@ -96,7 +96,7 @@ Note: you cannot skip any cells. If this happens, the code will not work and you
 After training, the model is evaluated before and after it is exported to a .tflite model. You will see these results directly in the google colab notebook and you should pay attention that the values do not differ too much. If this happens, something strange has happened in the training or export process and you will need to adjust your training and validation files and repeat the process.
 
  <p align="center">
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=600 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=800 >
 </p>
 
 Note: The mean average precision (mAP) was calculated using COCO (Common Objects in Context, https://cocodataset.org/)
