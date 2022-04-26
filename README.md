@@ -124,7 +124,7 @@ Once the virtual environment has been adjusted, you can execute the training scr
 
 ### 3.) IMAGE PROCESSING
 
-#### 1.1) Google colab option (easier to use):
+#### 3.1) Google colab option (easier to use):
 
 Link to the google colab: https://colab.research.google.com/drive/1yYFuL3nnxHVXfjSvsRz-pFrDTsFPO2Y7?usp=sharing
 
