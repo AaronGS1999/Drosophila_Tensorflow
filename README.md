@@ -99,7 +99,7 @@ After training, the model is evaluated before and after it is exported to a .tfl
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=800 >
 </p>
 
-Note: The mean average precision (mAP) was calculated using COCO (Common Objects in Context, https://cocodataset.org/)
+Note: The mean average precision (mAP) was calculated using COCO (https://cocodataset.org/)
 
 #### 1.2) Local training option (very dependent on the hardware you have)
 
