@@ -45,7 +45,7 @@ In order to increase the training performance, two techniques were applied to th
 
 #### 1.1) Google colab option (easier to use):
 
-To use this option, you only need a gmail account and upload files to drive with a specific structure. Within a folder you must also include another called "train" where the photos intended for training will be with their respective .xml files and another called "val" where the photos for validation and their respective .xml files will be included.
+To use this option, you only need a gmail account and upload files to google Drive with a specific structure. Within a folder you must also include another called "train" where the photos intended for training will be with their respective .xml files and another called "val" where the photos for validation and their respective .xml files will be included.
 
 The next step is to open the link to the google colab with the code for the training: https://colab.research.google.com/drive/1SdoGigd8u9fq0PAgp6AqXftFHUAuaNqb?usp=sharing
 
@@ -58,7 +58,7 @@ You need to change the runtime settings. Go in the top menu to runtime > change 
 Once this option is adjusted, you will be able to connect to the environment and after this you must mount your Drive in the environment by pressing the icon shown in the following image:
 
  <p align="center">
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/runtime_setting.png">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/drive_setting.png">
 </p>
 
 ---
