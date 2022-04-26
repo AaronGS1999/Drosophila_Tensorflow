@@ -97,8 +97,16 @@ Note: The mean average precision (mAP) was calculated using COCO (Common Objects
 
 If you have a good processor and above all, if you have an NVIDIA graphics card with enough memory for your interests, you could use this method as an alternative.
 
-In order to use the GPU for training, it is necessary to install specific drivers for the graphics card and the appropriate python tensorflow package (Take a look here: https://www.tensorflow.org/install/source). In our case we use a laptop with windows operating system and an NVIDIA GeForce 1660 Ti laptop GPU and we install CUDA 11.2 and cuDNN 11.2 to work with Tensorflow 2.6.0 package. 
+In order to use the GPU for training, it is necessary to install specific drivers for the graphics card and the appropriate python tensorflow package (Take a look here: https://www.tensorflow.org/install/source). In our case we use a laptop with windows operating system and an NVIDIA GeForce 1660 Ti laptop GPU and we install CUDA 11.2, cuDNN 8.1 and Bazel 3.7.2 to work with Tensorflow 2.6.0 package. 
 
 With the prerequisites installed, the next step is to install the necessary packages with the appropriate versions. To work more comfortably we use Anaconda Navigator (https://www.anaconda.com/products/distribution) but any virtual environment manager can be used.
+
+Python version and necessary packages versions:
+ - Python 3.8.12
+ - tflite-model-maker 0.3.4
+ - tflite-support 0.3.1
+ - tensorflow 2.6.0
+ - keras 2.6.0
+ - tensorflow-estimator 2.6.0
 
 ---
