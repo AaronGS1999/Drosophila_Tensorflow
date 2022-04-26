@@ -130,4 +130,10 @@ Link to the google colab: https://colab.research.google.com/drive/1yYFuL3nnxHVXf
 
 To use this option, you will again need a gmail account and a specific folder structure. it is necessary that you have a folder called "Image_Processing_Approach" in your Google Drive with the image you want to process (default: "01.JPG") and the trained model (default: drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite). Finally you should also have a folder inside Image_Processing_Approach, called: "processed". The "processed" folder must be empty and google drive does not allow empty folders to be uploaded, so a code has been included that creates this folder in the Google Colab notebook.
 
+The code basically divides a photo into 20 parts, in our case taken by the camera Canon EOS 70D and passes each fragment through the AI:
+
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/image_processing" | width=800 >
+</p>
+
 ---
