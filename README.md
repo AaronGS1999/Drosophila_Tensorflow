@@ -75,9 +75,9 @@ In our case we have used the efficientdet_lite2 model because it meets the neces
 
 After this, it only remains to adjust two variables, the number of epochs and the batch_size.
 
-     batch_size: Number of photos it takes at a time to train the network each time. If the number is 4, the photos will be passed 4 by 4 until all the photos of the dataset are passed
+ - batch_size: Number of photos it takes at a time to train the network each time. If the number is 4, the photos will be passed 4 by 4 until all the photos of the dataset are passed
      
-     epochs: Number of times the entire dataset passes through the AI during training
+ - epochs: Number of times the entire dataset passes through the AI during training
      
 You can do this setting in the following line of code: 
 
