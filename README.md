@@ -41,3 +41,16 @@ In order to increase the training performance, two techniques were applied to th
 
 ---
 
+### 2.) TRAINING
+
+#### 1.1) Google colab option (easier to use):
+
+To use this option, you only need a gmail account and upload files to drive with a specific structure. Within a folder you must also include another called "train" where the photos intended for training will be with their respective .xml files and another called "val" where the photos for validation and their respective .xml files will be included.
+
+The next step is to open the link to the google colab with the code for the training: https://colab.research.google.com/drive/1SdoGigd8u9fq0PAgp6AqXftFHUAuaNqb?usp=sharing
+
+You need to change the runtime settings. Go in the top menu to runtime > change runtime type and enable GPU hardware acceleration. It should look like this:
+
+
+
+---
