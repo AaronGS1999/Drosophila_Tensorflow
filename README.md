@@ -136,4 +136,12 @@ The code basically divides a photo into 20 parts, in our case taken by the camer
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/image_processing.jpg" | width=800 >
 </p>
 
+To use Google Colab code, simply run the code cells sequentially.
+
+As output, a .csv file similar to this will be obtained:
+
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/example_output.png">
+</p>
+
 ---
