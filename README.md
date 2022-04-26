@@ -133,7 +133,7 @@ To use this option, you will again need a gmail account and a specific folder st
 The code basically divides a photo into 20 parts, in our case taken by the camera Canon EOS 70D and passes each fragment through the AI:
 
  <p align="center">
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/image_processing" | width=800 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/image_processing.jpg" | width=800 >
 </p>
 
 ---
