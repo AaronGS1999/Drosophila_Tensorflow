@@ -144,4 +144,10 @@ As output, a .csv file similar to this will be obtained:
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/example_output.png">
 </p>
 
+You can also rebuild the original image with the processed images and download it:
+
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/example_output.png">
+</p>
+
 ---
