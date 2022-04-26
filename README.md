@@ -32,7 +32,7 @@ using a python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob
 The final step in preparing the dataset is to indicate what the AI needs to learn. To perform this task, the opensource program LabelImage was used (https://github.com/tzutalin/labelImg).  With this program, the flies to be identified and the type (wild type or white type) are labeled in a graphical interface and then an .xml file can be saved where the label and the coordinates of the flies in the image are recorded in pascal voc format. This must be done for the images contained in the training and validation folder.
 
  <p align="center">
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/labeling.jpg">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/labeling.jpg" | width=600 >
 </p>
 
 ---
