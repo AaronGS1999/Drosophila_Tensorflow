@@ -78,6 +78,10 @@ After this, it only remains to adjust two variables, the number of epochs and th
  - batch_size: Number of photos it takes at a time to train the network each time. If the number is 4, the photos will be passed 4 by 4 until all the photos of the dataset are passed
      
  - epochs: Number of times the entire dataset passes through the AI during training
+ 
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/training.jpg" | width=600 >
+</p>
      
 You can do this setting in the following line of code: 
 
