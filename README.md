@@ -74,7 +74,7 @@ Now you will have to choose the model you want to train. You can do this in the 
       
 In our case we have used the efficientdet_lite2 model because it meets the necessary precision requirements and in an acceptable time. You can change the model by changing the number "2" to 0, 1, 2, 3, and 4. The lower the number, the faster the model will make inferences, but will generally achieve lower accuracy values. You should assess which model is best for you to use based on your dataset. Also slower but more accurate models will have a bigger impact on the resources that Google colab allows you to use.
 
-After this, it only remains to adjust two variables, the number of epochs and the batch_size.
+After this, you must adjust two variables, the number of epochs and the batch_size.
 
  - batch_size: Number of photos it takes at a time to train the network each time. If the number is 4, the photos will be passed 4 by 4 until all the photos of the dataset are passed
      
@@ -89,6 +89,27 @@ You can do this setting in the following line of code:
      model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
      
 In our case, the best results are achieved with a number of epochs = 120 and a batch_size = 16. Note that a very high number of epochs can cause overfitting and make the model not generalize well and that a higher number of batch_sizes can improve model accuracy but will have a larger impact on google colab resources and may exceed the GPU memory limit.
+
+There is one last detail, you must indicate the labels that you put in the LabelImage program. In this case our labels are: "white type" and "wild type". It can be modified in the following part of the code:
+
+    training_data = object_detector.DataLoader.from_pascal_voc(
+        training_path, 
+        training_path, 
+        ["white type", "wild type"]
+    )
+    validation_data = object_detector.DataLoader.from_pascal_voc(
+        validation_path, 
+        validation_path, 
+        ["white type", "wild type"]
+    )
+
+
+# Training
+"""
+batch_size: Numero de datos que toma para entrenar la red cada vez
+epochs: Numero de veces que pasa por el conjunto de datos de entrenamiento
+"""
+model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
 
 At this time you are ready to run the cells sequentially using the play icon to the left of each cell. As a result you will get a .tflite file where the trained model is saved and you and you can download it to your computer.
 
