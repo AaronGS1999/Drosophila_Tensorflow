@@ -34,12 +34,12 @@ spec = model_spec.get('efficientdet_lite2')
 training_data = object_detector.DataLoader.from_pascal_voc(
     training_path, 
     training_path, 
-    ['wildtype', 'whitetype']
+    ['wildtype', 'whitetype'] # Change this to your labels
 )
 validation_data = object_detector.DataLoader.from_pascal_voc(
     validation_path, 
     validation_path, 
-    ['wildtype', 'whitetype']
+    ['wildtype', 'whitetype'] # Change this to your labels
 )
 
 # Training
