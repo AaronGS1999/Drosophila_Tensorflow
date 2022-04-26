@@ -55,4 +55,10 @@ You need to change the runtime settings. Go in the top menu to runtime > change 
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/runtime_setting.png">
 </p>
 
+Once this option is adjusted, you will be able to connect to the environment and after this you must mount your Drive in the environment by pressing the icon shown in the following image:
+
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/runtime_setting.png">
+</p>
+
 ---
