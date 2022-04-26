@@ -44,7 +44,7 @@ In order to increase the training performance, two techniques were applied to th
 
 ### 2.) TRAINING
 
-#### 1.1) Google colab option (easier to use):
+#### 2.1) Google colab option (easier to use):
 
 To use this option, you only need a gmail account and upload files to google Drive with a specific structure. Within a folder you must also include another called "train" where the photos intended for training will be with their respective .xml files and another called "val" where the photos for validation and their respective .xml files will be included.
 
@@ -102,7 +102,7 @@ Note: The mean average precision (mAP) was calculated using COCO (https://cocoda
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=800 >
 </p>
 
-#### 1.2) Local training option (very dependent on the hardware you have)
+#### 2.2) Local training option (very dependent on the hardware you have):
 
 If you have a good processor and above all, if you have an NVIDIA graphics card with enough memory for your interests, you could use this method as an alternative.
 
@@ -119,5 +119,13 @@ Python version and necessary packages versions:
  - tensorflow-estimator 2.6.0
 
 Once the virtual environment has been adjusted, you can execute the training script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/57746fd49055ac4c75a1ff1f284ce067cdd9da22/TRAINING/load_training_validation.py) to carry out the training. The code is practically the same as the one explained in the Google Colab version, except that in this case the paths are local directories on the computer (update script paths).
+
+---
+
+### 3.) IMAGE PROCESSING
+
+#### 1.1) Google colab option (easier to use):
+
+
 
 ---
