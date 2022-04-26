@@ -85,10 +85,20 @@ You can do this setting in the following line of code:
      
 In our case, the best results are achieved with a number of epochs = 120 and a batch_size = 16. Note that a very high number of epochs can cause overfitting and make the model not generalize well and that a higher number of batch_sizes can improve model accuracy but will have a larger impact on google colab resources and may exceed the GPU memory limit.
 
-At this time you are ready to run the cells sequentially using the play icon to the left of each cell. As a result you will get a .tflite file where the trained model is saved
+At this time you are ready to run the cells sequentially using the play icon to the left of each cell. As a result you will get a .tflite file where the trained model is saved and you and you can download it to your computer.
 
 Note: you cannot skip any cells. If this happens, the code will not work and you will have to restart the environment and execute each cell sequentially again.
 
 After training, the model is evaluated before and after it is exported to a .tflite model. You will see these results directly in the google colab notebook and you should pay attention that the values do not differ too much. If this happens, something strange has happened in the training or export process and you will need to adjust your training and validation files and repeat the process.
+
+Note: The mean average precision (mAP) was calculated using COCO (Common Objects in Context, https://cocodataset.org/)
+
+#### 1.2) Local training option (very dependent on the hardware you have)
+
+If you have a good processor and above all, if you have an NVIDIA graphics card with enough memory for your interests, you could use this method as an alternative.
+
+In order to use the GPU for training, it is necessary to install specific drivers for the graphics card and the appropriate python tensorflow package (Take a look here: https://www.tensorflow.org/install/source). In our case we use a laptop with windows operating system and an NVIDIA GeForce 1660 Ti laptop GPU and we install CUDA 11.2 and cuDNN 11.2 to work with Tensorflow 2.6.0 package. 
+
+With the prerequisites installed, the next step is to install the necessary packages with the appropriate versions. To work more comfortably we use Anaconda Navigator (https://www.anaconda.com/products/distribution) but any virtual environment manager can be used.
 
 ---
