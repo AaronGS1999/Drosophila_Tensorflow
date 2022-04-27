@@ -171,6 +171,9 @@ You can also rebuild the original image with the processed images and download i
 
 #### 3.2) Local image processing option (Dependent on your computer's CPU):
 
-To use this option, the simplest thing is to reuse the virtual environment that was created for section 2.2 of this repository.
+To use this option, the simplest thing is to reuse the virtual environment that was created for section 2.2 of this repository. just add two more packages:
+
+ - tflite_support
+ - image_slicer
 
 ---
