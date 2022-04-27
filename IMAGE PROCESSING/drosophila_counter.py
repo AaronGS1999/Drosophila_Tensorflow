@@ -299,7 +299,7 @@ for i in range(1, cont ):
     name_photo = "01_0"+ str(counter2)+"_0" + str(counter1) + ".png"
     INPUT_IMAGE = path_folder + "/"+ name_photo
     DETECTION_THRESHOLD = 0.65
-    TFLITE_MODEL_PATH = "C:/Users/aaron/Desktop/Troceador/drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite"
+    TFLITE_MODEL_PATH = path_folder + "/drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite" # Change this if you use another model
 
     image = Image.open(INPUT_IMAGE).convert('RGB')
     #image.thumbnail((512, 512), Image.ANTIALIAS)
