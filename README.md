@@ -169,4 +169,8 @@ You can also rebuild the original image with the processed images and download i
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/reconstructed_image.png">
 </p>
 
+#### 3.2) Local image processing option (Dependent on your computer's CPU):
+
+
+
 ---
