@@ -103,14 +103,6 @@ There is one last detail, you must indicate the labels that you put in the Label
         ["white type", "wild type"]
     )
 
-
-# Training
-"""
-batch_size: Numero de datos que toma para entrenar la red cada vez
-epochs: Numero de veces que pasa por el conjunto de datos de entrenamiento
-"""
-model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
-
 At this time you are ready to run the cells sequentially using the play icon to the left of each cell. As a result you will get a .tflite file where the trained model is saved and you and you can download it to your computer.
 
 Note: you cannot skip any cells. If this happens, the code will not work and you will have to restart the environment and execute each cell sequentially again.
