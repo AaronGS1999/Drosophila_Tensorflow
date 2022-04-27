@@ -178,10 +178,12 @@ To use this option, the simplest thing is to reuse the virtual environment that 
  
 Then, you can download the "IMAGE PROCESSING" folder from this repository to the desktop of your computer. Inside this folder you will find a python script called "drosophila_counter.py" where you will have to modify the variable that refer to certain paths that the program will use:
 
+    # drosophila_counter.py
     username = "your username" #Add here your username. If you are not using windows consider redoing the paths to make it work correctly
     
 By default, the script will use the model "drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite" included in the folder "IMAGE PROCESSING". If you want to use another model you must change the following variable:
 
+    # drosophila_counter.py
     TFLITE_MODEL_PATH = path_folder + "/drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite" # Change this if you use another model
 
 ---
