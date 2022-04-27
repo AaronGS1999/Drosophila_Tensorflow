@@ -278,10 +278,19 @@ def visualize(
   imagewhitetypecount = 0
   return image
 
-path_folder = "C:/Users/aaron/Desktop/IMAGE PROCESSING"
-path_folder2 = "C:/Users/aaron/Desktop/IMAGE PROCESSING/processed"
+username = "" # Add here your username. If you are not using windows consider redoing the paths to make it work correctly
+path_folder = "C:/Users/" + username + "/Desktop/IMAGE PROCESSING"
+path_folder2 = "C:/Users/" + username + "/Desktop/IMAGE PROCESSING/processed"
 INPUT_IMAGENAME = "/01.JPG"
 cont = 21
+
+# Create folder required
+try:
+    os.mkdir(path_folder2)
+except OSError as error:
+    if error.errno != errno.EEXIST:
+        RAISE
+        
 # fragment the image
 image_slicer.slice(path_folder + INPUT_IMAGENAME, 20)
 file_name = Path(path_folder + INPUT_IMAGENAME).stem
