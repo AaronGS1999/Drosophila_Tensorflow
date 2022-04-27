@@ -76,7 +76,8 @@ Then, you must check that the content of the variable "training_path" and that o
 
 Now you will have to choose the model you want to train. You can do this in the following part of the code:
 
-      spec = model_spec.get('efficientdet_lite2')
+    # Google colab ---> load_training_validation.ipynb
+    spec = model_spec.get('efficientdet_lite2')
       
 In our case we have used the efficientdet_lite2 model because it meets the necessary precision requirements and in an acceptable time. You can change the model by changing the number "2" to 0, 1, 2, 3, and 4. The lower the number, the faster the model will make inferences, but will generally achieve lower accuracy values. You should assess which model is best for you to use based on your dataset. Also slower but more accurate models will have a bigger impact on the resources that Google colab allows you to use.
 
@@ -92,12 +93,14 @@ After this, you must adjust two variables, the number of epochs and the batch_si
      
 You can do this setting in the following line of code: 
 
-     model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
+    # Google colab ---> load_training_validation.ipynb
+    model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
      
 In our case, the best results are achieved with a number of epochs = 120 and a batch_size = 16. Note that a very high number of epochs can cause overfitting and make the model not generalize well and that a higher number of batch_sizes can improve model accuracy but will have a larger impact on google colab resources and may exceed the GPU memory limit.
 
 There is one last detail, you must indicate the labels that you put in the LabelImage program. In this case our labels are: "white type" and "wild type". It can be modified in the following part of the code:
 
+    # Google colab ---> load_training_validation.ipynb
     training_data = object_detector.DataLoader.from_pascal_voc(
         training_path, 
         training_path, 
