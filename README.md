@@ -20,6 +20,10 @@ The images that were taken were divided into three different folders, one for wi
 
 Note: The images obtained with the canon camera, which are considerably larger (5470x3072 pixels) than those of the digital microscope (1094x912 pixels), gave problems during the training, so it was decided to divide the photograph into 20 (1094x768 pixels) pieces with the python image slicer library (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/4a60bbc513e815d96bb4fb950f312cb4625300fe/DATA%20PREPARATION/slicer.py). This number of fragments was to obtain images of a size similar to that obtained with the digital microscope. Due to this,, the photographs were taken under very specific conditions. A simple grid of 20 cells (4 rows * 5 columns) was designed in word and printed on blue cardboard because the contrast of the colors of the flies was better. The camera was placed on a tripod and the lens was positioned at a 90º angle and at a distance of (add distance) focusing on the central cells of the grid:
 
+ <p align="center">
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/camera_tripod.jpg">
+</p>
+
 #### 1.2) Preparation of the folders:
 
 using a python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/14ea96aab87be04cf95a98b9fe272334f8ef5218/DATA%20PREPARATION/split_folder.py), the images from each folder (wild, white and both flies) were divided into three other folders (Training, validation and test) using the same proportions: 80% for training, 10% for validation and 10 % For tests. This was done mainly to avoid biases such as there being no hard-to-identify photos in the validation or a balanced representation of the types of flies in each group of images. 
