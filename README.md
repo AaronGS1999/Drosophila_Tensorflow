@@ -22,7 +22,7 @@ Note: The images obtained with the canon camera, which are considerably larger (
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/camera_tripod.jpg" | width=300 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/scale.jpg" | width=650 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/scale.jpg" | width=600 >
 </p>
 
 #### 1.2) Preparation of the folders:
