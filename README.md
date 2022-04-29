@@ -22,6 +22,7 @@ Note: The images obtained with the canon camera, which are considerably larger (
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/camera_tripod.jpg" | width=300 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/scale.jpg" | width=800 >
 </p>
 
 #### 1.2) Preparation of the folders:
@@ -30,11 +31,6 @@ using a python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/split_folder.jpg" | width=800 >
- <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/scale.jpg" | width=800 >
-</p>
-
- <p align="center">
- <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/scale.jpg" | width=800 >
 </p>
 
 #### 1.3) Labeling:
