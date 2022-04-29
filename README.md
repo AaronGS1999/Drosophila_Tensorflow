@@ -45,7 +45,7 @@ The final step in preparing the dataset is to indicate what the AI needs to lear
 In order to increase the training performance, two techniques were applied to the dataset. Image fragments were collaged automatically  (Improves detection of small targets) and noise was artificially introduced into photos (Improves resilience to photo artifacts) using the rooboflow web platform (https://roboflow.com). An example of this could be the following image with 5% noise:
 
  <p align="center">
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/improvements_example.jpg" | width=800 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/improvements_example.jpg" | width=800 hight = 200>
 </p>
 
 After applying these improvements, in our case, we got 1251 photos for training and 55 photos for validation.
