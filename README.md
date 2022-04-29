@@ -30,7 +30,7 @@ using a python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/split_folder.jpg" | width=800 >
- <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/split_folder.jpg" | width=800 >
+ <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/scale.jpg" | width=800 >
 </p>
 
 #### 1.3) Labeling:
