@@ -181,8 +181,9 @@ You can also rebuild the original image with the processed images and download i
 
 To use this option, the simplest thing is to reuse the virtual environment that was created for section 2.2 of this repository. just add two more packages:
 
- - tflite_support
- - image_slicer
+ - tflite_support 0.3.1
+ - image_slicer  2.1.1
+ - opencv-python 4.5.4.60
  
 Then, you can download the "IMAGE PROCESSING" folder from this repository to the desktop of your computer. Inside this folder you will find a python script called "drosophila_counter.py" where you will have to modify the variable that refer to certain paths that the program will use:
 
