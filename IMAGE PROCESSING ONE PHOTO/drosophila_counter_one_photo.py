@@ -278,7 +278,7 @@ def visualize(
   imagewhitetypecount = 0
   return image
 
-username = "aaron" # Add here your username. If you are not using windows consider redoing the paths to make it work correctly
+username = "" # Add here your username. If you are not using windows consider redoing the paths to make it work correctly
 path_folder = "C:/Users/" + username + "/Desktop/IMAGE PROCESSING ONE PHOTO"
 INPUT_IMAGENAME = "TEST_1.jpg"
 
