@@ -203,4 +203,6 @@ The outputs are the same as in the Google Colab version but in this case you wil
 
 Out of curiosity, we wanted to test what happens when we apply our trained model with images taken directly from the internet. For this, the "drosophila_counter.py" script was adapted so that it would not divide the photos into 20 pieces and would process them directly.
 
+If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder
+
 ---
