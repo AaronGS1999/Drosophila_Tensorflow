@@ -206,14 +206,14 @@ Out of curiosity, we wanted to test what happens when we apply our trained model
 If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder to your desktop. You will need to make the changes mentioned in section 3.2 of this repository to be able to run the "drosophila_counter_one_photo.py" script locally. The image that is processed must be inside the folder where the script is located and it must be called "TEST_1.jpg" because it is the file that it will look for by default. Some of the results we have obtained are the following:
 
 <p align="center">
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_1.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_2.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_3.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_4.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_5.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_6.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_7.png" | width=800 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_8.png" | width=800 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_1.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_2.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_3.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_4.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_5.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_6.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_7.png" | width=200 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_8.png" | width=200 >
 </p>
 
 
