@@ -198,3 +198,7 @@ By default, the script will use the model "drosophila_lite2_epochs120_batch16_im
 The outputs are the same as in the Google Colab version but in this case you will need to delete the files that are generated manually (Fragments before being processed, the processed fragments and the csv file), it will not take much time to do it. Don't forget to save the data you need. 
 
 ---
+
+### 4.) INTERNET IMAGE PROCESSING
+
+---
