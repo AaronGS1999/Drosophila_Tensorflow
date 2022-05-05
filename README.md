@@ -203,6 +203,6 @@ The outputs are the same as in the Google Colab version but in this case you wil
 
 Out of curiosity, we wanted to test what happens when we apply our trained model with images taken directly from the internet. For this, the "drosophila_counter.py" script was adapted so that it would not divide the photos into 20 pieces and would process them directly.
 
-If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder
+If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder to your desktop. You will need to make the changes mentioned in section 3.2 of this repository to be able to run the "drosophila_counter_one_photo.py" script locally. The image that is processed must be inside the folder where the script is located and it must be called "TEST_1.jpg" because it is the file that it will look for by default
 
 ---
