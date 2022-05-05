@@ -195,6 +195,6 @@ By default, the script will use the model "drosophila_lite2_epochs120_batch16_im
     # drosophila_counter.py
     TFLITE_MODEL_PATH = path_folder + "/drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite" # Change this if you use another model
 
-The outputs are the same as in the Google Colab version but in this case you will need to delete the files that are generated manually (Fragments before being processed, the processed fragments and the csv file), it will not take much time to do it but keep the data you need.
+The outputs are the same as in the Google Colab version but in this case you will need to delete the files that are generated manually (Fragments before being processed, the processed fragments and the csv file), it will not take much time to do it. Don't forget to save the data you need. 
 
 ---
