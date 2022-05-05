@@ -213,7 +213,7 @@ If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder 
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_5.png" | width=400 >
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_6.png" | width=400 >
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_7.png" | width=400 >
-  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_8.png" | width=400 >
+  <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/processed_8.png" | width=800 >
 </p>
 
 As you can see, the model is not so badly adapted to other conditions, even to drawings, but it will always work better for the type of photos with which it has been trained.
