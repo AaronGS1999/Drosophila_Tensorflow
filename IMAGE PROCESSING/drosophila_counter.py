@@ -329,8 +329,10 @@ for i in range(1, cont ):
 print("The total number of wild types detected has been: " + str(wildtypecount))
 print("The total number of white type detected has been: "+ str(whitetypecount))
 
+# reconstruction of the fragments
 tiles = image_slicer.open_images_in(path_folder2)
 image = image_slicer.join(tiles)
 image.save(path_folder2+"/reconstructed_image.png")
+
 # save results
 dataframe.to_csv('drosophila_output.csv')
