@@ -219,3 +219,11 @@ If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder 
 As you can see, the model is not so badly adapted to other conditions, even to drawings, but it will always work better for the type of photos with which it has been trained.
 
 ---
+
+### 5.) GENERATION OF RANDOM PHOTOS WITH DENSITY 100 AND 200
+
+To generate this type of photos, 5 flies per cell were placed in the 6 cells of the grid in the case of density 100 and 10 in the case of density 200 and photos were taken. Subsequently, the photos were divided into 20 fragments as mentioned above and the best-focused fragments were accumulated.
+
+Then, with a script, the photos are generated with the selected fragments.
+
+---
