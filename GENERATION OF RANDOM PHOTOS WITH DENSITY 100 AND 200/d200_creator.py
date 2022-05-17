@@ -7,7 +7,7 @@ from numpy import RAISE
 from PIL import Image
 from shutil import rmtree
 
-user = "aaron"
+user = "" # add your username here
 output_folder = "C:/Users/"+ user +"/Desktop/GENERATION OF RANDOM PHOTOS WITH DENSITY 100 AND 200/output/"
 
 try:
