@@ -224,6 +224,8 @@ As you can see, the model is not so badly adapted to other conditions, even to d
 
 To generate this type of photos, 5 flies per cell were placed in the 6 central cells of the grid in the case of density 100 and 10 in the case of density 200 and photos were taken. Subsequently, the photos were divided into 20 fragments as mentioned above and the best-focused fragments were accumulated.
 
-Then, with a script, the artificial photos are generated with the selected fragments.
+Then, with a script executed in the work environment that we made previously, the artificial photos are generated with the selected fragments. You can find this program in the homonymous folder at the title of this section. For windows users, you just have to copy the "GENERATION OF RANDOM PHOTOS WITH DENSITY 100 AND 200" folder to the desktop and update the variable user = "" with the name of your user (user = "your username") for density 100 and 200. If you use another operating system you must update the paths to match your file system.
+
+Due to we use the split folders library. a folder called "output" is generated, inside it there will be a folder called "train" where the fragments to be joined will be found, the reconstructed image with a .png extension and also in .JPG format. This last file is the one used to carry out the detections since they require the .JPG format.
 
 ---
