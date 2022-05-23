@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 # Required libraries
 import os
 import errno
