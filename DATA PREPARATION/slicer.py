@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import image_slicer
 from PIL import Image
 path = "" # add the full path of the image
