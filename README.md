@@ -4,21 +4,19 @@
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/Imagen_google_colab.png">
 </p>
 
-Compilation of steps to follow and tools to generate models to detect Drosophila melanogaster mutants. 
+How to generate an AI model trained to detect Drosophila melanogaster mutants 
 ---
 ### 1.) DATASET PREPARATION
 
 #### 1.1) Photo taking:
 
-To take the photos we use a digital microscope Bysameyee 8-SA-00  to get photos with more details, a Canon EOS 70D camera with a 100 mm macro objective f/2.8L lens because it will be the camera used to perform the experiment and cardboard of different colours also used for the backgrounds (improves accuracy). 
+To capture the pictures, we use a Bysameyee 8-SA-00 digital microscope which provides more detailed photos. Additionally, we use a Canon EOS 70D camera with a 100mm macro objective f/2.8L lens, as this camera will be used for the experiment. We also use cardboard of various colors as backgrounds, which helps improve accuracy.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/photo_taking.jpg" | width=800 >
 </p>
 
-The images that were taken were divided into three different folders, one for wild flies, others for white flies and another for photos with both types of flies.
-
-Note: The images obtained with the canon camera, which are considerably larger (5470x3072 pixels) than those of the digital microscope (1094x912 pixels), gave problems during the training, so it was decided to divide the photograph into 20 (1094x768 pixels) pieces with the python image slicer library (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/4a60bbc513e815d96bb4fb950f312cb4625300fe/DATA%20PREPARATION/slicer.py). This number of fragments was to obtain images of a size similar to that obtained with the digital microscope. Due to this,, the photographs were taken under very specific conditions. A simple grid of 20 cells (4 rows * 5 columns) was designed in word and printed on blue cardboard because the contrast of the colors of the flies was better. The camera was placed on a tripod and the lens was positioned at a 90º angle and at a distance of (add distance) focusing on the central cells of the grid:
+The captured images were sorted into three different folders: one for wild flies, one for white flies, and one for photos with both types of flies. However, there were some issues during the training phase with images taken using the Canon camera, which were significantly larger (5470x3072 pixels) than those taken with the digital microscope (1094x912 pixels). To address this issue, the python image slicer library (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/4a60bbc513e815d96bb4fb950f312cb4625300fe/DATA%20PREPARATION/slicer.py) was used to divide the larger images into 20 pieces (1094x768 pixels) to obtain a similar size to that of the microscope images. To ensure consistency, photographs were taken under specific conditions, including the use of a simple grid of 20 cells (4 rows * 5 columns) designed in Word and printed on blue cardboard to provide better contrast for the fly colors. The camera was positioned at a 90º angle and a specific distance (to be added) from the grid, with the lens focused on the central cells.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/camera_tripod.jpg" | width=300 >
@@ -27,7 +25,7 @@ Note: The images obtained with the canon camera, which are considerably larger (
 
 #### 1.2) Preparation of the folders:
 
-using a python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/14ea96aab87be04cf95a98b9fe272334f8ef5218/DATA%20PREPARATION/split_folder.py), the images from each folder (wild, white and both flies) were divided into three other folders (Training, validation and test) using the same proportions: 80% for training, 10% for validation and 10 % For tests. This was done mainly to avoid biases such as there being no hard-to-identify photos in the validation or a balanced representation of the types of flies in each group of images. 
+A python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/14ea96aab87be04cf95a98b9fe272334f8ef5218/DATA%20PREPARATION/split_folder.py) was used to divide the images from each folder (wild, white, and both flies) into three separate folders (Training, Validation, and Test) using the same proportions: 80% for training, 10% for validation, and 10% for testing. This was done to ensure a balanced representation of each type of fly and to prevent biases such as the absence of hard-to-identify photos in the validation set. 
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/split_folder.jpg" | width=800 >
@@ -35,7 +33,7 @@ using a python script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob
 
 #### 1.3) Labeling:
 
-The final step in preparing the dataset is to indicate what the AI needs to learn. To perform this task, the opensource program LabelImage was used (https://github.com/tzutalin/labelImg).  With this program, the flies to be identified and the type (wild type or white type) are labeled in a graphical interface and then an .xml file can be saved where the label and the coordinates of the flies in the image are recorded in pascal voc format. This must be done for the images contained in the training and validation folder.
+The last step in dataset preparation is to define what the AI needs to learn. This was done using the open-source program LabelImage (https://github.com/tzutalin/labelImg). The program allows flies to be labeled and classified as wild type or white type in a graphical interface. An .xml file is generated in pascal voc format, which records the label and coordinates of the flies in the image. This labeling process is done for all images in the training and validation folders.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/labeling.jpg" | width=800 >
@@ -43,7 +41,7 @@ The final step in preparing the dataset is to indicate what the AI needs to lear
 
 #### 1.4) Increased training efficiency (optional but strongly recommended):
 
-In order to increase the training performance, two techniques were applied to the dataset. Image fragments were collaged automatically  (Improves detection of small targets) and noise was artificially introduced into photos (Improves resilience to photo artifacts) using the rooboflow web platform (https://roboflow.com). An example of this could be the following image with 5% noise:
+To enhance the training performance, two techniques were applied to the dataset using the roboflow web platform (https://roboflow.com). The first technique involved automatically combining image fragments to improve the detection of small targets. The second technique involved artificially introducing noise into the photos to enhance their resilience to photo artifacts. An example of this is the following image with 5% noise.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/improvements_example.jpg" | width=800 >
@@ -55,48 +53,40 @@ After applying these improvements, in our case, we got 1251 photos for training 
 
 ### 2.) TRAINING
 
-#### 2.1) Google colab option (easier to use):
+#### 2.1) Training with Google colab:
 
-To use this option, you only need a gmail account and upload files to google Drive with a specific structure. Within a folder you must also include another called "train" where the photos intended for training will be with their respective .xml files and another called "val" where the photos for validation and their respective .xml files will be included.
+To get started, all you need is a Gmail account and upload the files to Google Drive following a specific structure. Within a folder, you should create two more folders named "train" for the photos intended for training with their respective .xml files, and "val" for the photos and their respective .xml files intended for validation.
 
-The next step is to open the link to the google colab with the code for the training: https://colab.research.google.com/drive/1SdoGigd8u9fq0PAgp6AqXftFHUAuaNqb?usp=sharing
-
-You need to change the runtime settings. Go in the top menu to runtime > change runtime type and enable GPU hardware acceleration. It should look like this (Don't forget to save the changes):
+The next step is to open the Google Colab link (https://colab.research.google.com/drive/1SdoGigd8u9fq0PAgp6AqXftFHUAuaNqb?usp=sharing) that contains the code for the training. You need to change the runtime settings by going to the top menu and selecting runtime > change runtime type, and enabling GPU hardware acceleration. Don't forget to save the changes.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/runtime_setting.png">
 </p>
 
-Once this option is adjusted, you will be able to connect to the environment and after this you must mount your Drive in the environment by pressing the icon shown in the following image:
+After adjusting the GPU hardware acceleration option, connect to the environment and mount your Drive by clicking on the icon shown in the image below:
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/drive_setting.png">
 </p>
 
-Then, you must check that the content of the variable "training_path" and that of "validation_path" corresponds to the paths of your files. With the variable "tflite_filename" you can set the name of the .tflite file that will be generated after training:
+Next, you need to verify that the paths specified in the "training_path" and "validation_path" variables match the location of your files. Additionally, you can use the "tflite_filename" variable to choose a name for the .tflite file that will be created after the training process.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/path_setting.png">
 </p>
 
-Now you will have to choose the model you want to train. You can do this in the following part of the code:
+To choose the model you want to train, you need to modify the relevant section of the code. This can be found in the following lines:
 
     # Google colab ---> load_training_validation.ipynb
     spec = model_spec.get('efficientdet_lite2')
-      
-In our case we have used the efficientdet_lite2 model because it meets the necessary precision requirements and in an acceptable time. You can change the model by changing the number "2" to 0, 1, 2, 3, and 4. The lower the number, the faster the model will make inferences, but will generally achieve lower accuracy values. You should assess which model is best for you to use based on your dataset. Also slower but more accurate models will have a bigger impact on the resources that Google colab allows you to use.
-
-After this, you must adjust two variables, the number of epochs and the batch_size.
-
- - batch_size: Number of photos it takes at a time to train the network each time. If the number is 4, the photos will be passed 4 by 4 until all the photos of the dataset are passed
-     
- - epochs: Number of times the entire dataset passes through the AI during training
+    
+We used the efficientdet_lite2 model because it balances precision requirements with an acceptable training time. You can try other models by changing the number (0-4), but keep in mind that slower but more accurate models will require more resources. Additionally, you need to adjust the batch_size (number of photos trained at once) and epochs (number of times dataset is trained) according to your needs. A smaller batch_size will train photos faster, but larger batch sizes are more efficient with large datasets. The number of epochs depends on the amount of time you have and the desired accuracy of your model.
  
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/training.jpg" | width=800 >
 </p>
      
-You can do this setting in the following line of code: 
+You can do this setting in the following lines of code: 
 
     # Google colab ---> load_training_validation.ipynb
     model = object_detector.create(training_data, model_spec=spec, epochs=120, batch_size=16, train_whole_model=True, validation_data=validation_data)
@@ -117,47 +107,23 @@ There is one last detail, you must indicate the labels that you put in the Label
         ["white type", "wild type"]
     )
 
-At this time you are ready to run the cells sequentially using the play icon to the left of each cell. As a result you will get a .tflite file where the trained model is saved and you and you can download it to your computer.
+To run the code and get the trained model in a .tflite file, simply run each cell sequentially by clicking on the play icon to the left of each cell. It's important to not skip any cells or the code won't work and you'll need to restart and execute the cells again.
 
-Note: you cannot skip any cells. If this happens, the code will not work and you will have to restart the environment and execute each cell sequentially again.
+After training, the model is evaluated and compared before and after being exported to a .tflite model. You can see the results directly in the google colab notebook and ensure that the values are not significantly different. If they are, you may need to adjust your training and validation files and repeat the process.
 
-After training, the model is evaluated before and after it is exported to a .tflite model. You will see these results directly in the google colab notebook and you should pay attention that the values do not differ too much. If this happens, something strange has happened in the training or export process and you will need to adjust your training and validation files and repeat the process.
-
-Note: The mean average precision (mAP) was calculated using COCO (https://cocodataset.org/)
+Note that the mean average precision (mAP) was calculated using COCO (https://cocodataset.org/).
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=800 >
 </p>
 
-#### 2.2) Local training option (very dependent on the hardware you have):
-
-If you have a good processor and above all, if you have an NVIDIA graphics card with enough memory for your interests, you could use this method as an alternative.
-
-In order to use the GPU for training, it is necessary to install specific drivers for the graphics card and the appropriate python tensorflow package (Take a look here: https://www.tensorflow.org/install/source). In our case we use a laptop with windows operating system and an NVIDIA GeForce 1660 Ti laptop GPU and we install CUDA 11.2, cuDNN 8.1 and Bazel 3.7.2 to work with Tensorflow 2.6.0 package. 
-
-With the prerequisites installed, the next step is to install the necessary packages with the appropriate versions. To work more comfortably we use Anaconda Navigator (https://www.anaconda.com/products/distribution) but any virtual environment manager can be used.
-
-Python version and necessary packages versions:
- - Python 3.8.12
- - tflite-model-maker 0.3.4
- - tflite-support 0.3.1
- - tensorflow 2.6.0
- - keras 2.6.0
- - tensorflow-estimator 2.6.0
-
-Once the virtual environment has been adjusted, you can execute the training script (https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/57746fd49055ac4c75a1ff1f284ce067cdd9da22/TRAINING/load_training_validation.py) to carry out the training. The code is practically the same as the one explained in the Google Colab version, except that in this case the paths are local directories on the computer (update script paths).
-
 ---
 
 ### 3.) IMAGE PROCESSING
 
-#### 3.1) Google colab option (easier to use):
+#### 3.1) Image processing with Google colab option:
 
-Link to the google colab: https://colab.research.google.com/drive/1yYFuL3nnxHVXfjSvsRz-pFrDTsFPO2Y7?usp=sharing
-
-To use this option, you will again need a gmail account and a specific folder structure. it is necessary that you have a folder called "Image_Processing_Approach" in your Google Drive with the image you want to process (default: "01.JPG") and the trained model (default: drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite). Finally you should also have a folder inside Image_Processing_Approach, called: "processed". The "processed" folder must be empty and google drive does not allow empty folders to be uploaded, so a code has been included that creates this folder in the Google Colab notebook.
-
-The code basically divides a photo into 20 parts, in our case taken by the camera Canon EOS 70D and passes each fragment through the AI:
+To use this option, you need a Gmail account and a specific folder structure. Create a folder called "Image_Processing_Approach" in your Google Drive with the image you want to process (default: "01.JPG") and the trained model (default: drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite). Additionally, create a folder called "processed" inside "Image_Processing_Approach", which must be empty. However, Google Drive does not allow empty folders to be uploaded, so a code is included to create the folder in the Google Colab notebook. The code divides a photo into 20 parts and passes each fragment through the AI. The Google Colab link is: https://colab.research.google.com/drive/1yYFuL3nnxHVXfjSvsRz-pFrDTsFPO2Y7?usp=sharing.
 
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/image_processing.jpg" | width=800 >
@@ -176,26 +142,6 @@ You can also rebuild the original image with the processed images and download i
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/reconstructed_image.png">
 </p>
-
-#### 3.2) Local image processing option (Dependent on your computer's CPU):
-
-To use this option, the simplest thing is to reuse the virtual environment that was created for section 2.2 of this repository. just add three more packages:
-
- - tflite_support 0.3.1
- - image_slicer  2.1.1
- - opencv-python 4.5.4.60
- 
-Then, you can download the "IMAGE PROCESSING" folder from this repository to the desktop of your computer. Inside this folder you will find a python script called "drosophila_counter.py" where you will have to modify the variable that refer to certain paths that the program will use:
-
-    # drosophila_counter.py
-    username = "your username" #Add here your username. If you are not using windows consider redoing the paths to make it work correctly
-    
-By default, the script will use the model "drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite" included in the folder "IMAGE PROCESSING". If you want to use another model you must change the following variable:
-
-    # drosophila_counter.py
-    TFLITE_MODEL_PATH = path_folder + "/drosophila_lite2_epochs120_batch16_img1251_wild_white_v7_V2.tflite" # Change this if you use another model
-
-The outputs are the same as in the Google Colab version but in this case you will need to delete the files that are generated manually (Fragments before being processed, the processed fragments and the csv file), it will not take much time to do it. Don't forget to save the data you need. 
 
 ---
 
@@ -217,15 +163,5 @@ If you want to try it, download and move the "INTERNET IMAGE PROCESSING" folder 
 </p>
 
 As you can see, the model is not so badly adapted to other conditions, even to drawings, but it will always work better for the type of photos with which it has been trained.
-
----
-
-### 5.) GENERATION OF RANDOM PHOTOS WITH DENSITY 100 AND 200
-
-To generate this type of photos, 5 flies per cell were placed in the 6 central cells of the grid in the case of density 100 and 10 in the case of density 200 and photos were taken. Subsequently, the photos were divided into 20 fragments as mentioned above and the best-focused fragments were accumulated.
-
-Then, with a script executed in the work environment that we made previously, the artificial photos are generated with the selected fragments. You can find this program in the homonymous folder at the title of this section. For windows users, you just have to copy the "GENERATION OF RANDOM PHOTOS WITH DENSITY 100 AND 200" folder to the desktop and update the variable user = "" with the name of your user (user = "your username") for density 100 (d100_creator.py) and 200 (d200_creator.py). If you use another operating system you must update the paths to match your file system.
-
-Due to we use the split folders library. a folder called "output" is generated, inside it there will be a folder called "train" where the fragments to be joined will be found, the reconstructed image with a .png extension and also in .JPG format. This last file is the one used to carry out the detections since they require the .JPG format.
 
 ---
