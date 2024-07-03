@@ -113,6 +113,8 @@ After training, the model is evaluated and compared before and after being expor
 
 Note that the mean average precision (mAP) was calculated using COCO (https://cocodataset.org/).
 
+Example training and validation data set: https://drive.google.com/file/d/1ftwAVHFSc5U7Qbph5NYCqZL7h1Yp6J5m/view?usp=sharing
+
  <p align="center">
   <img src="https://github.com/AaronGS1999/Drosophila_Tensorflow/blob/main/images/validation.jpg" | width=800 >
 </p>
